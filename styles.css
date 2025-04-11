@@ -1,0 +1,88 @@
+/* Reiniciamos márgenes y aplicamos la tipografía */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #00ff99;
+  }
+  
+  /* Contenedor centralizado */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilo neon para el título */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #39ff14;
+    text-shadow: 
+      0 0 5px #39ff14,
+      0 0 10px #39ff14,
+      0 0 20px #39ff14,
+      0 0 40px #39ff14;
+    animation: neonPulse 1.5s infinite alternate;
+  }
+  
+  /* Caja con fondo semitransparente y bordes neon */
+  .data-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00f0ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+      0 0 10px #00f0ff,
+      0 0 20px #00f0ff;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  /* Estilo de los textos en la caja */
+  .data-box p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00f0ff;
+  }
+  
+  /* Resaltar los valores en neón rojizo */
+  .data-box span {
+    font-weight: bold;
+    color: #ff073a;
+    text-shadow:
+      0 0 5px #ff073a,
+      0 0 10px #ff073a;
+  }
+  
+  /* Animación para el efecto pulso neon */
+  @keyframes neonPulse {
+    from {
+      text-shadow:
+        0 0 5px #39ff14,
+        0 0 10px #39ff14,
+        0 0 20px #39ff14,
+        0 0 40px #39ff14;
+    }
+    to {
+      text-shadow:
+        0 0 10px #39ff14,
+        0 0 20px #39ff14,
+        0 0 30px #39ff14,
+        0 0 50px #39ff14;
+    }
+  }
+  
+  /* Ajustes Responsivos */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    .data-box p {
+      font-size: 1rem;
+    }
+  }
+  
